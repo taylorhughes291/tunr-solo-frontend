@@ -34,6 +34,23 @@ function App() {
     setSongs(data)
   }
 
+  const handleDelete = async (index) => {
+    await fetch(url + `/${index}`, {
+      method: 'DELETE'
+    })
+    handleGet()
+  }
+
+  const handleFavorite = async (song) => {
+    await fetch(url + `/${song.id}`, {
+      method: 'PUT',
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(song)
+    })
+    handleGet()
+  }
 
   ////////////////////////
   // Render
@@ -54,6 +71,8 @@ function App() {
       <div className="playlist">
         <Playlist 
           songs={songs}
+          handleDelete={handleDelete}
+          handleFavorite={handleFavorite}
         />
       </div>
       <div className="favorites">
