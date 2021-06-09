@@ -69,6 +69,7 @@ function App() {
         <h3>FOR ALL YOUR PLAYLIST NEEDS</h3>
       </div>
       <div className="playlist">
+        <h2>Playlist</h2>
         <Playlist 
           songs={songs}
           handleDelete={handleDelete}
@@ -76,7 +77,12 @@ function App() {
         />
       </div>
       <div className="favorites">
-        <Favorites />
+        <h2>Favorite Songs</h2>
+        <Favorites 
+        songs={songs}
+        handleDelete={handleDelete}
+        handleFavorite={handleFavorite}
+        />
       </div>
       <div className="add-song">
         <AddSong 
