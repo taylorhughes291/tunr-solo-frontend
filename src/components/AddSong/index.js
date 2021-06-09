@@ -37,7 +37,7 @@ const AddSong = (props) => {
         <>
             <h2>ADD A NEW SONG</h2>
             <form
-                onSubmit={props.handleSubmit()}
+                onSubmit={handleSubmit}
             >
                 <p>TITLE</p>
                 <input

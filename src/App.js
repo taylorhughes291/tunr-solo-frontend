@@ -25,6 +25,7 @@ function App() {
       },
       body: JSON.stringify(data)
     })
+    handleGet()
   }
 
   const handleGet = async () => {
