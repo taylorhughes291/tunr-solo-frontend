@@ -35,22 +35,27 @@ const Playlist = (props) => {
               className="song" 
               key={index} 
             >
-              <p>{item.title}</p>
-              {!item.isFavorite && <i 
-                className="far fa-heart"
-                onClick={() => handleFavorite(item)}
-              ></i>}
-              {item.isFavorite && <i 
-                className="fas fa-heart"
-                onClick={() => handleFavorite(item)}
-              ></i>}
-              <p>{item.artist}</p>
-              <p>{item.time}</p>
-              <i 
-                className="far fa-window-close"
-                onClick={() => handleDelete(item.id)}
-              ></i>
-  
+              <div className="title-heart-time-cont">
+                <div className="title-heart-cont">
+                  <p>{item.title}</p>
+                  {!item.isFavorite && <i 
+                    className="far fa-heart"
+                    onClick={() => handleFavorite(item)}
+                  ></i>}
+                  {item.isFavorite && <i 
+                    className="fas fa-heart"
+                    onClick={() => handleFavorite(item)}
+                  ></i>}
+                </div>
+                <p>{item.time}</p>
+              </div>
+              <div className="artist-delete-cont">
+                <p>{item.artist}</p>
+                <i 
+                  className="far fa-window-close"
+                  onClick={() => handleDelete(item.id)}
+                ></i>
+              </div>  
             </div>
           )
         })

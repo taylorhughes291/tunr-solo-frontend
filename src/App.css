@@ -37,6 +37,207 @@
   }
 }
 
-div.song {
+/* ~~~~~~~~~~~~~~~~~~~ Layouts ~~~~~~~~~~~~~~~~~~~ */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* header */
+
+div.header {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 20px;
+  border-bottom: 5px solid red;
+}
+
+div.header h1 {
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+div.header h3 {
+  margin: 10px 0;
+}
+
+/* Playlist */
+
+div.playlist {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 20px;
+}
+
+div.playlist h2 {
+  font-size: 30px;
+}
+
+div.playlist div.songs {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+div.playlist div.songs div.song {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px;
   border: 1px solid;
+}
+
+div.playlist div.songs div.song div.title-heart-cont {
+  display: flex;
+  align-items: center;
+}
+
+div.playlist div.songs div.song div.title-heart-cont p {
+  max-width: 200px;
+  margin: 0 20px 0 0;
+}
+
+div.playlist div.songs div.song div.title-heart-time-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+div.playlist div.songs div.song div.artist-delete-cont {
+  display: flex;
+  align-items: flex-start;
+}
+
+div.playlist div.songs div.song div.artist-delete-cont p {
+  max-width: 200px;
+  margin: 0 20px 0 0;
+}
+
+div.playlist div.songs div.song p {
+  margin: 15px 0 0;
+}
+
+/* Favorites */
+div.favorites {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 20px;
+}
+
+div.favorites h2 {
+  font-size: 30px;
+}
+
+div.favorites div.songs {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+div.favorites div.songs div.song {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px;
+  border: 1px solid;
+}
+
+div.favorites div.songs div.song div.title-heart-cont {
+  display: flex;
+  align-items: center;
+}
+
+div.favorites div.songs div.song div.title-heart-cont p {
+  max-width: 200px;
+  margin: 0 20px 0 0;
+}
+
+div.favorites div.songs div.song div.title-heart-time-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+div.favorites div.songs div.song div.artist-delete-cont {
+  display: flex;
+  align-items: flex-start;
+}
+
+div.favorites div.songs div.song div.artist-delete-cont p {
+  max-width: 200px;
+  margin: 0 20px 0 0;
+}
+
+div.favorites div.songs div.song p {
+  margin: 15px 0 0;
+}
+
+/* Add Song */
+
+div.add-song {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 20px;
+  margin: 0 0 20px;
+}
+
+div.add-song h2 {
+  font-size: 30px;
+  margin: 15px 0;
+}
+
+div.add-song form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+div.add-song form input {
+  width: 100%;
+  height: 35px;
+}
+
+div.add-song form input:last-of-type {
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+div.add-song form * {
+  margin: 10px 0 0;
+}
+
+i {
+  cursor: pointer;
 }
