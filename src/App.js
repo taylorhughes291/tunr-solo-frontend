@@ -43,24 +43,7 @@ function App() {
     handleGet()
   }, [])
 
-  const songsRender = () => {
-    return (
-      songs.map((item, index) => {
-        return (
-          <div 
-            className="song" 
-            key={index} 
-          >
-            <p>{item.title}</p>
-            <p>{item.artist}</p>
-            <p>{item.time}</p>
-            <i class="far fa-window-close"></i>
 
-          </div>
-        )
-      })
-    )
-  }
 
   return (
     <div className="App">
@@ -69,8 +52,9 @@ function App() {
         <h3>FOR ALL YOUR PLAYLIST NEEDS</h3>
       </div>
       <div className="playlist">
-        <Playlist />
-        {songs.length > 0 && songsRender()}
+        <Playlist 
+          songs={songs}
+        />
       </div>
       <div className="favorites">
         <Favorites />
