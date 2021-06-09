@@ -15,9 +15,10 @@ const Playlist = (props) => {
   }
 
   const handleFavorite = (item) => {
+    const favorite = item.isFavorite ? false : true
     const data = {
       ...item,
-      isFavorite: true
+      isFavorite: favorite
     }
     props.handleFavorite(data)
   }
@@ -35,10 +36,14 @@ const Playlist = (props) => {
               key={index} 
             >
               <p>{item.title}</p>
-              <i 
+              {!item.isFavorite && <i 
                 className="far fa-heart"
                 onClick={() => handleFavorite(item)}
-              ></i>
+              ></i>}
+              {item.isFavorite && <i 
+                className="fas fa-heart"
+                onClick={() => handleFavorite(item)}
+              ></i>}
               <p>{item.artist}</p>
               <p>{item.time}</p>
               <i 
